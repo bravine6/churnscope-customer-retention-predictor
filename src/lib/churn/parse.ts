@@ -51,10 +51,10 @@ function validateAndClean(
   for (const r of raw) {
     // TotalCharges arrives as text with blanks for brand-new customers;
     // a blank coerces to NaN and the row is dropped, matching the pipeline.
-    const tenure = Number(r.tenure);
-    const monthly = Number(r.MonthlyCharges);
-    const total = r.TotalCharges?.trim() === "" ? NaN : Number(r.TotalCharges);
-    const churn = r.Churn?.trim();
+    const tenure = Number(r["tenure"]);
+    const monthly = Number(r["MonthlyCharges"]);
+    const total = r["TotalCharges"]?.trim() === "" ? NaN : Number(r["TotalCharges"]);
+    const churn = r["Churn"]?.trim();
 
     if (
       !Number.isFinite(tenure) ||
