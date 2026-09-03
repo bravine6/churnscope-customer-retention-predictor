@@ -73,7 +73,7 @@ function validateAndClean(
     }
     rows.push({
       ...(row as Omit<CustomerRow, (typeof NUMERIC_COLUMNS)[number]>),
-      SeniorCitizen: String(r.SeniorCitizen).trim() === "1" ? "1" : "0",
+      SeniorCitizen: String(r["SeniorCitizen"]).trim() === "1" ? "1" : "0",
       tenure,
       MonthlyCharges: monthly,
       TotalCharges: total,
