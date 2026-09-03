@@ -376,7 +376,7 @@ function NumberField({
   label: string;
   value: number;
   onChange: (v: number) => void;
-  error?: string;
+  error?: string | undefined;
   step?: number;
   min?: number;
   max?: number;

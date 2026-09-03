@@ -197,7 +197,7 @@ function ModelSection({ name, metrics }: { name: string; metrics: ModelMetrics }
                     <th scope="row" className="p-2 text-left text-xs text-muted-foreground">
                       {label}
                     </th>
-                    {cm[r].map((v, c) => (
+                    {(cm[r] ?? []).map((v, c) => (
                       <td
                         key={c}
                         className="rounded-md border border-border bg-card p-2 text-center font-medium text-foreground"
