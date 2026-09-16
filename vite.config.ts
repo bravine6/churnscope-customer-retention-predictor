@@ -20,4 +20,7 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // GitHub Pages needs a static export, so pin the nitro preset to "static".
+  // Lovable's own build ignores this because it sets LOVABLE_NITRO_PRESET.
+  nitro: GH_PAGES_BASE ? { preset: "static" } : true,
 });
