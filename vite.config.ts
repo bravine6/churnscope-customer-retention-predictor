@@ -18,25 +18,22 @@ export default defineConfig({
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     server: { entry: "server" },
+    // Prerender the known routes so GitHub Pages receives real HTML files.
+    ...(GH_PAGES_BASE
+      ? {
+          pages: [
+            { path: "/" },
+            { path: "/dashboard" },
+            { path: "/predictor" },
+            { path: "/performance" },
+            { path: "/methodology" },
+            { path: "/about" },
+          ],
+          prerender: { enabled: true, autoStaticPathsDiscovery: false },
+        }
+      : {}),
   },
   // GitHub Pages needs a static export, so pin the nitro preset to "static".
   // Lovable's own build ignores this because it sets LOVABLE_NITRO_PRESET.
   nitro: GH_PAGES_BASE ? { preset: "static" } : true,
-  // Prerender the known routes so GitHub Pages receives real HTML files.
-  pages: GH_PAGES_BASE
-    ? [
-        { path: "/", sitemap: { priority: 1.0, changefreq: "weekly" } },
-        { path: "/dashboard", sitemap: { priority: 0.9, changefreq: "weekly" } },
-        { path: "/predictor", sitemap: { priority: 0.9, changefreq: "weekly" } },
-        { path: "/performance", sitemap: { priority: 0.8, changefreq: "weekly" } },
-        { path: "/methodology", sitemap: { priority: 0.7, changefreq: "monthly" } },
-        { path: "/about", sitemap: { priority: 0.6, changefreq: "monthly" } },
-      ]
-    : undefined,
-  prerender: GH_PAGES_BASE
-    ? {
-        enabled: true,
-        filter: () => true,
-      }
-    : undefined,
 });
