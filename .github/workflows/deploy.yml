@@ -34,13 +34,18 @@ jobs:
         env:
           GH_PAGES_BASE: /churnscope-customer-retention-predictor/
 
+      - name: Prepare static output
+        run: |
+          touch dist/client/.nojekyll
+          cp dist/client/index.html dist/client/404.html
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./.output/public
+          path: ./dist/client
 
   deploy:
     environment:
