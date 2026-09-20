@@ -48,7 +48,10 @@ export interface PredictionResult {
 
 export async function loadCoefficients(): Promise<CoefficientsFile | null> {
   try {
-    const res = await fetch("/model/model_coefficients.json", { cache: "no-store" });
+    const res = await fetch(
+      `${import.meta.env.BASE_URL}model/model_coefficients.json`,
+      { cache: "no-store" },
+    );
     if (!res.ok) return null;
     const json = (await res.json()) as CoefficientsFile;
     return typeof json.intercept === "number" ? json : null;

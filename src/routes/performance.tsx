@@ -55,7 +55,9 @@ function Performance() {
 
   useEffect(() => {
     let active = true;
-    fetch("/model/model_metrics.json", { cache: "no-store" })
+    fetch(`${import.meta.env.BASE_URL}model/model_metrics.json`, {
+      cache: "no-store",
+    })
       .then((r) => (r.ok ? r.json() : null))
       .then((json: MetricsFile | null) => {
         if (!active) return;

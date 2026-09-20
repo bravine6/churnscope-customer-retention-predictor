@@ -240,8 +240,15 @@ def main() -> None:
     metrics["Random Forest"]["feature_importance"] = [
         {"feature": f, "importance": float(i)} for f, i in importances[:15]
     ]
-    metrics["generated_at"] = pd.Timestamp.now(tz="UTC").isoformat()
-    (out_dir / "model_metrics.json").write_text(json.dumps(metrics, indent=2))
+
+    metrics_payload = {
+        "models": metrics,
+        "generated_at": pd.Timestamp.now(tz="UTC").isoformat(),
+    }
+
+    (out_dir / "model_metrics.json").write_text(
+        json.dumps(metrics_payload, indent=2)
+    )
 
     # --- Step 10: export ---------------------------------------------------
     joblib.dump(preprocessor, out_dir / "churn_pipeline.joblib")
