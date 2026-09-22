@@ -33,6 +33,8 @@ export const Route = createFileRoute("/performance")({
         property: "og:description",
         content: "Logistic Regression versus Random Forest evaluation results.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { property: "og:url", content: "/performance" },
     ],
     links: [{ rel: "canonical", href: "/performance" }],

@@ -37,6 +37,8 @@ export const Route = createFileRoute("/predictor")({
         property: "og:description",
         content: "Score a customer profile and review suggested retention actions.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { property: "og:url", content: "/predictor" },
     ],
     links: [{ rel: "canonical", href: "/predictor" }],

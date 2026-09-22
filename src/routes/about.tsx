@@ -16,6 +16,8 @@ export const Route = createFileRoute("/about")({
         property: "og:description",
         content: "The story and craft behind the ChurnScope portfolio project.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { property: "og:url", content: "/about" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
@@ -83,27 +85,29 @@ function About() {
           About the author
         </h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          Built by <strong className="text-foreground">[Your Name]</strong> as a portfolio piece
+          Built by <strong className="text-foreground">Bravine Cheruiyot</strong> as a portfolio piece
           demonstrating the full data science workflow - data cleaning, exploratory analysis,
           modelling, evaluation and presentation.
         </p>
         <ul className="mt-4 flex flex-wrap gap-3 text-sm">
           <li>
-            <a className="text-primary underline-offset-4 hover:underline" href="https://github.com/your-username">
-              GitHub - github.com/your-username
+            <a
+              className="text-primary underline-offset-4 hover:underline"
+              href="https://github.com/bravine6/churnscope-customer-retention-predictor"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub - churnscope-customer-retention-predictor
             </a>
           </li>
           <li>
             <a
               className="text-primary underline-offset-4 hover:underline"
-              href="https://www.linkedin.com/in/your-profile"
+              href="https://www.linkedin.com/in/bravine-cheruiyot-906140180/"
+              target="_blank"
+              rel="noreferrer"
             >
-              LinkedIn - linkedin.com/in/your-profile
-            </a>
-          </li>
-          <li>
-            <a className="text-primary underline-offset-4 hover:underline" href="https://your-portfolio.example.com">
-              Portfolio - your-portfolio.example.com
+              LinkedIn - Bravine Cheruiyot
             </a>
           </li>
         </ul>

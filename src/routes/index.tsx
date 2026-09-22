@@ -26,6 +26,8 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Interactive churn analytics and a customer-level churn predictor.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
