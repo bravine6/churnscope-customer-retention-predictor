@@ -1,4 +1,4 @@
-# ChurnScope — Customer Churn Analytics & Prediction
+# ChurnScope - Customer Churn Analytics & Prediction
 
 A portfolio-ready data science project: an interactive web app that analyses
 the IBM Telco Customer Churn dataset, plus a reproducible Python pipeline that
@@ -27,7 +27,7 @@ bun run dev
 ```
 
 Built with TanStack Start, React 19, TypeScript, Tailwind CSS v4, shadcn/ui,
-Recharts and PapaParse. All CSV parsing and aggregation happens client-side —
+Recharts and PapaParse. All CSV parsing and aggregation happens client-side -
 no backend, no uploaded data leaves the browser.
 
 ## Python pipeline setup
@@ -55,7 +55,7 @@ cp data-science/outputs/model_metrics.json data-science/outputs/model_coefficien
 - **Model Performance** reads `public/model/model_metrics.json`.
 - **Predictor** reads `public/model/model_coefficients.json`. Without it, the
   predictor runs in a clearly labelled *Demonstration Mode* whose scores are
-  illustrative only — never quote them as model output.
+  illustrative only - never quote them as model output.
 
 ## Suggested screenshots for your portfolio
 

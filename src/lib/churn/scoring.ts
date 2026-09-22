@@ -2,13 +2,13 @@
 //
 // Two modes, deliberately separated:
 //
-// MODEL MODE — when public/model/model_coefficients.json exists (exported by
+// MODEL MODE - when public/model/model_coefficients.json exists (exported by
 // data-science/train_model.py), we reproduce the trained logistic-regression
 // pipeline in TypeScript: standardise numerics with the exported means/stds,
 // one-hot encode categoricals using the exported category mapping, dot the
 // coefficients, and apply the sigmoid. The result is the real model's output.
 //
-// DEMONSTRATION MODE — when no exported model exists, we fall back to a
+// DEMONSTRATION MODE - when no exported model exists, we fall back to a
 // transparent, hand-authored heuristic. It is clearly labelled in the UI as
 // illustrative and NOT a trained model prediction.
 
@@ -157,6 +157,6 @@ function retentionActions(input: PredictorInput): string[] {
   if (input.PaymentMethod === "Electronic check")
     actions.push("Suggest switching to automatic payment with a small incentive.");
   if (!actions.length)
-    actions.push("Maintain regular engagement — this profile shows no obvious risk drivers.");
+    actions.push("Maintain regular engagement - this profile shows no obvious risk drivers.");
   return actions;
 }
