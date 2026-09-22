@@ -14,6 +14,8 @@ export const Route = createFileRoute("/methodology")({
         property: "og:description",
         content: "How the churn models are trained, evaluated and kept honest.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { property: "og:url", content: "/methodology" },
     ],
     links: [{ rel: "canonical", href: "/methodology" }],

@@ -46,6 +46,8 @@ export const Route = createFileRoute("/dashboard")({
         property: "og:description",
         content: "Explore churn KPIs and drivers from the Telco Customer Churn dataset.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { property: "og:url", content: "/dashboard" },
     ],
     links: [{ rel: "canonical", href: "/dashboard" }],
