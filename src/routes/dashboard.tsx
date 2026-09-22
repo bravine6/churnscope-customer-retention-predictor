@@ -35,13 +35,13 @@ import {
 export const Route = createFileRoute("/dashboard")({
   head: () => ({
     meta: [
-      { title: "Analytics Dashboard — ChurnScope" },
+      { title: "Analytics Dashboard - ChurnScope" },
       {
         name: "description",
         content:
           "Interactive KPIs and charts for telecom customer churn: churn rate by contract, internet service, payment method and tenure.",
       },
-      { property: "og:title", content: "Analytics Dashboard — ChurnScope" },
+      { property: "og:title", content: "Analytics Dashboard - ChurnScope" },
       {
         property: "og:description",
         content: "Explore churn KPIs and drivers from the Telco Customer Churn dataset.",

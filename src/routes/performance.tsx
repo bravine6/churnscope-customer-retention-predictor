@@ -22,13 +22,13 @@ import type { MetricsFile, ModelMetrics } from "@/lib/churn/types";
 export const Route = createFileRoute("/performance")({
   head: () => ({
     meta: [
-      { title: "Model Performance — ChurnScope" },
+      { title: "Model Performance - ChurnScope" },
       {
         name: "description",
         content:
           "Real evaluation results for the churn models: accuracy, precision, recall, F1, ROC-AUC, confusion matrix and ROC curve.",
       },
-      { property: "og:title", content: "Model Performance — ChurnScope" },
+      { property: "og:title", content: "Model Performance - ChurnScope" },
       {
         property: "og:description",
         content: "Logistic Regression versus Random Forest evaluation results.",
@@ -171,7 +171,7 @@ function ModelSection({ name, metrics }: { name: string; metrics: ModelMetrics }
             <div key={k} className="rounded-lg border border-border bg-secondary/50 p-3">
               <dt className="text-xs text-muted-foreground">{METRIC_LABELS[k]}</dt>
               <dd className="mt-1 text-lg font-semibold text-foreground">
-                {typeof metrics[k] === "number" ? metrics[k].toFixed(3) : "—"}
+                {typeof metrics[k] === "number" ? metrics[k].toFixed(3) : "-"}
               </dd>
             </div>
           ))}

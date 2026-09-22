@@ -15,13 +15,13 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ChurnScope — Customer Churn Analytics & Prediction" },
+      { title: "ChurnScope - Customer Churn Analytics & Prediction" },
       {
         name: "description",
         content:
-          "Explore telecom customer churn with an interactive analytics dashboard and a churn-risk predictor — an end-to-end data science portfolio project.",
+          "Explore telecom customer churn with an interactive analytics dashboard and a churn-risk predictor - an end-to-end data science portfolio project.",
       },
-      { property: "og:title", content: "ChurnScope — Customer Churn Analytics & Prediction" },
+      { property: "og:title", content: "ChurnScope - Customer Churn Analytics & Prediction" },
       {
         property: "og:description",
         content: "Interactive churn analytics and a customer-level churn predictor.",
@@ -64,7 +64,7 @@ function Index() {
             ChurnScope
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-primary-foreground/85">
-            Customer Churn Analytics &amp; Prediction for the IBM Telco dataset — from raw CSV to
+            Customer Churn Analytics &amp; Prediction for the IBM Telco dataset - from raw CSV to
             interactive dashboards and a customer-level risk predictor.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -102,11 +102,11 @@ function Index() {
           </div>
           <div>
             <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-              What churn is — and why predicting it matters
+              What churn is - and why predicting it matters
             </h2>
             <p className="mt-3 text-muted-foreground">
               Churn is when a customer stops doing business with a company. If a provider can
-              estimate which customers are likely to leave — and understand the factors behind it —
+              estimate which customers are likely to leave - and understand the factors behind it -
               retention teams can act early with targeted offers instead of blanket discounts.
             </p>
           </div>
@@ -158,7 +158,7 @@ function Index() {
               </li>
               <li className="flex gap-2">
                 <Sparkles className="mt-0.5 size-4 shrink-0 text-chart-1" aria-hidden="true" />
-                Model performance page showing only real metrics exported by the Python pipeline —
+                Model performance page showing only real metrics exported by the Python pipeline -
                 no invented numbers, ever.
               </li>
             </ul>

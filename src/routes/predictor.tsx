@@ -26,13 +26,13 @@ import type { CoefficientsFile } from "@/lib/churn/types";
 export const Route = createFileRoute("/predictor")({
   head: () => ({
     meta: [
-      { title: "Customer Churn Predictor — ChurnScope" },
+      { title: "Customer Churn Predictor - ChurnScope" },
       {
         name: "description",
         content:
           "Estimate the churn risk of an individual telecom customer and see the factors driving the result.",
       },
-      { property: "og:title", content: "Customer Churn Predictor — ChurnScope" },
+      { property: "og:title", content: "Customer Churn Predictor - ChurnScope" },
       {
         property: "og:description",
         content: "Score a customer profile and review suggested retention actions.",
@@ -284,7 +284,7 @@ function Predictor() {
                 {result
                   ? result.mode === "model"
                     ? "Produced by the trained logistic-regression model."
-                    : "Demonstration Mode — illustrative result, not a model prediction."
+                    : "Demonstration Mode - illustrative result, not a model prediction."
                   : "Submit the form to see an estimate."}
               </CardDescription>
             </CardHeader>

@@ -1,5 +1,5 @@
 // Aggregation helpers: every number shown on the dashboard is computed here
-// from the loaded rows — nothing is hard-coded.
+// from the loaded rows - nothing is hard-coded.
 
 import type { CustomerRow, Filters } from "./types";
 
@@ -68,10 +68,10 @@ export function churnRateBy(
 }
 
 const TENURE_BINS: [string, number, number][] = [
-  ["0–12 mo", 0, 12],
-  ["13–24 mo", 13, 24],
-  ["25–48 mo", 25, 48],
-  ["49–72 mo", 49, 72],
+  ["0-12 mo", 0, 12],
+  ["13-24 mo", 13, 24],
+  ["25-48 mo", 25, 48],
+  ["49-72 mo", 49, 72],
 ];
 
 export function churnRateByTenureGroup(rows: CustomerRow[]): RatePoint[] {
@@ -87,11 +87,11 @@ export function churnRateByTenureGroup(rows: CustomerRow[]): RatePoint[] {
 }
 
 const CHARGE_BINS: [string, number, number][] = [
-  ["$0–25", 0, 25],
-  ["$25–50", 25, 50],
-  ["$50–75", 50, 75],
-  ["$75–100", 75, 100],
-  ["$100–125", 100, 125],
+  ["$0-25", 0, 25],
+  ["$25-50", 25, 50],
+  ["$50-75", 50, 75],
+  ["$75-100", 75, 100],
+  ["$100-125", 100, 125],
   ["$125+", 125, Infinity],
 ];
 
@@ -115,7 +115,7 @@ export interface Association {
   lift: number; // churn rate relative to the overall average
 }
 
-// Exploratory, descriptive statistic — NOT a model output. Finds the
+// Exploratory, descriptive statistic - NOT a model output. Finds the
 // categorical segments whose churn rate is highest relative to the average.
 const ASSOCIATION_FEATURES: (keyof CustomerRow)[] = [
   "Contract",

@@ -1,8 +1,8 @@
-# ChurnScope — Python pipeline
+# ChurnScope - Python pipeline
 
 This folder contains the reproducible machine-learning pipeline behind the
 ChurnScope web app. It is intentionally separate from the web code: the app
-never computes model results itself — it only displays the JSON this pipeline
+never computes model results itself - it only displays the JSON this pipeline
 exports.
 
 ## Setup
@@ -46,7 +46,7 @@ cp outputs/model_metrics.json outputs/model_coefficients.json ../public/model/
 
 The **Model Performance** page reads `model_metrics.json` and the **Predictor**
 page reads `model_coefficients.json`. Until those files exist, the pages show
-honest empty/demo states — no fabricated numbers.
+honest empty/demo states - no fabricated numbers.
 
 ## Notebook
 

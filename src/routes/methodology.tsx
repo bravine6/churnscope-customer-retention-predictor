@@ -3,13 +3,13 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/methodology")({
   head: () => ({
     meta: [
-      { title: "Methodology — ChurnScope" },
+      { title: "Methodology - ChurnScope" },
       {
         name: "description",
         content:
           "The full data science pipeline behind ChurnScope: cleaning, encoding, training, evaluation and export, plus limitations and responsible use.",
       },
-      { property: "og:title", content: "Methodology — ChurnScope" },
+      { property: "og:title", content: "Methodology - ChurnScope" },
       {
         property: "og:description",
         content: "How the churn models are trained, evaluated and kept honest.",
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/methodology")({
 const STEPS = [
   {
     title: "Load the dataset",
-    body: "Read Telco-Customer-Churn.csv with pandas and validate that every expected column — customerID, gender, SeniorCitizen, Partner, Dependents, tenure, service flags, Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges and Churn — is present before any processing begins.",
+    body: "Read Telco-Customer-Churn.csv with pandas and validate that every expected column - customerID, gender, SeniorCitizen, Partner, Dependents, tenure, service flags, Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges and Churn - is present before any processing begins.",
   },
   {
     title: "Validate the schema",
@@ -36,7 +36,7 @@ const STEPS = [
   },
   {
     title: "Handle missing values",
-    body: "Rows with missing TotalCharges are dropped — a handful of zero-tenure customers — and the target column is mapped from Yes/No to 1/0. The browser-side CSV uploader applies the same rules so the app and the pipeline agree.",
+    body: "Rows with missing TotalCharges are dropped - a handful of zero-tenure customers - and the target column is mapped from Yes/No to 1/0. The browser-side CSV uploader applies the same rules so the app and the pipeline agree.",
   },
   {
     title: "Encode categorical features",
@@ -52,11 +52,11 @@ const STEPS = [
   },
   {
     title: "Train the models",
-    body: "Two baselines are trained: Logistic Regression, chosen for interpretability — each coefficient has a clear directional meaning — and Random Forest, a non-linear ensemble that captures interactions the linear model cannot.",
+    body: "Two baselines are trained: Logistic Regression, chosen for interpretability - each coefficient has a clear directional meaning - and Random Forest, a non-linear ensemble that captures interactions the linear model cannot.",
   },
   {
     title: "Evaluate honestly",
-    body: "Accuracy, precision, recall, F1 and ROC-AUC are computed on the held-out test set, along with the confusion matrix, ROC curve points and feature importance. These numbers are written to model_metrics.json — the Performance page reads that file and shows nothing else.",
+    body: "Accuracy, precision, recall, F1 and ROC-AUC are computed on the held-out test set, along with the confusion matrix, ROC curve points and feature importance. These numbers are written to model_metrics.json - the Performance page reads that file and shows nothing else.",
   },
   {
     title: "Export for the web app",
@@ -114,7 +114,7 @@ function Methodology() {
             the reason a customer leaves.
           </li>
           <li>
-            Historical churn can be rare relative to retention, so accuracy alone is misleading —
+            Historical churn can be rare relative to retention, so accuracy alone is misleading -
             recall and ROC-AUC give a more honest picture.
           </li>
           <li>
@@ -131,7 +131,7 @@ function Methodology() {
         </h2>
         <p className="mt-3 text-sm text-muted-foreground">
           Churn predictions should inform retention outreach, not decide it automatically. A high
-          risk score is a prompt to look closer — not proof a customer will leave. Predictions made
+          risk score is a prompt to look closer - not proof a customer will leave. Predictions made
           on data outside the training distribution, or used to deny service rather than improve it,
           are misuse of this tool. All results shown in this app come from the loaded dataset or the
           Python pipeline's exported output; nothing is fabricated, and the project README explains

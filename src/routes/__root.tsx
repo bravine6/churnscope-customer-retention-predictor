@@ -80,13 +80,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "ChurnScope — Customer Churn Analytics & Prediction" },
+      { title: "ChurnScope - Customer Churn Analytics & Prediction" },
       {
         name: "description",
         content:
-          "Analyze telecom customer churn, explore the drivers, and estimate whether a customer is likely to leave — a portfolio data science project.",
+          "Analyze telecom customer churn, explore the drivers, and estimate whether a customer is likely to leave - a portfolio data science project.",
       },
-      { property: "og:title", content: "ChurnScope — Customer Churn Analytics & Prediction" },
+      { property: "og:title", content: "ChurnScope - Customer Churn Analytics & Prediction" },
       {
         property: "og:description",
         content:

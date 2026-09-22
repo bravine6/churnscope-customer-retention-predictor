@@ -109,7 +109,7 @@ export function CsvUploader({ compact = false }: { compact?: boolean }) {
         <Alert>
           <AlertTitle className="flex items-center justify-between gap-2">
             <span>
-              Loaded {meta.fileName} — {meta.rowCount.toLocaleString()} customers
+              Loaded {meta.fileName} - {meta.rowCount.toLocaleString()} customers
             </span>
             <Button type="button" variant="ghost" size="sm" onClick={clearDataset}>
               <X className="size-4" aria-hidden="true" /> Clear dataset
